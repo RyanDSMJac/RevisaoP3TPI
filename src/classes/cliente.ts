@@ -10,6 +10,6 @@ export default class Cliente extends Pessoa {
 
     imprimir(): void {
         super.imprimir();
-        console.log(`Saldo: R$ ${this.saldo.toFixed(2)}`);
+        console.log(`Saldo: R$ ${this.saldo.toFixed(2)} \n`);
     }
 }

@@ -10,7 +10,7 @@ export default class Pessoa {
     }
 
     imprimir(): void {
-        console.log(`Nome: ${this.nome} \n e-mail: ${this.email} \n Data Nasc: ${this.nasc.toLocaleDateString("pt-BR")} \n Idade: ${this.idade()} \n Faixa Etária: ${this.faixaEtaria()} \n Anos Bissextos: ${this.numBissextos()} \n`);
+        console.log(`Nome: ${this.nome} \n e-mail: ${this.email} \n Data Nasc: ${this.nasc.toLocaleDateString("pt-BR")} \n Idade: ${this.idade()} \n Faixa Etária: ${this.faixaEtaria()} \n Anos Bissextos: ${this.numBissextos()}`);
     }
 
     idade(): number {
