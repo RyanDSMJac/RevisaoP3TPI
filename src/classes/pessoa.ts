@@ -10,7 +10,7 @@ export default class Pessoa {
     }
 
     imprimir(): void {
-        console.log(`Nome: ${this.nome} \n e-mail: ${this.email} \n Data Nasc: ${this.nasc} \n Idade: ${this.idade} \n Faixa Etária: ${this.faixaEtaria} \n Anos Bissextos: ${this.numBissextos}`);
+        console.log(`Nome: ${this.nome} \n e-mail: ${this.email} \n Data Nasc: ${this.nasc.toLocaleDateString("pt-BR")} \n Idade: ${this.idade()} \n Faixa Etária: ${this.faixaEtaria()} \n Anos Bissextos: ${this.numBissextos()} \n`);
     }
 
     idade(): number {
@@ -27,7 +27,7 @@ export default class Pessoa {
         const anoInicio = this.nasc.getFullYear();
         const anoFim = new Date().getFullYear();
         let contagem = 0;
-        
+
         for (let ano = anoInicio; ano <= anoFim; ano++) {
             if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
                 contagem++;
